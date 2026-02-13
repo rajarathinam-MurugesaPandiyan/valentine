@@ -33,7 +33,9 @@ export default function CenterCard() {
   return (
     <div className="card">
       <p>
-        {isSuccess ? "Hurray Next Month Trip Porom 🎉" : "Hi Dhanalakshmi & Vanisri"}
+        {isSuccess
+          ? "Hurray Next Month Trip Porom 🎉"
+          : "Hi Dhanalakshmi & Vanisri"}
       </p>
       <div>
         {isSuccess ? (
@@ -59,7 +61,7 @@ export default function CenterCard() {
         )}
       </div>
       <div>
-        {displayText.length === text.length + 1 && !isSuccess ? (
+        {displayText.trim().length === text.trim().length && !isSuccess ? (
           <>
             <button className="yes_button" onClick={() => setIsSuccess(true)}>
               Yes
